@@ -54,6 +54,11 @@ public class Main {
                     boolean eliminar;
                     do {
                         System.out.println("Ingrese el número de la tarea que desea eliminar: ");
+                        while (!sc.hasNextInt()) {
+                            System.out.println("Error: Debe ingresar un número");
+                            sc.nextLine();
+                            System.out.println("Ingrese el número de la tarea que desea eliminar: ");
+                        }
                         int numeroEliminado = sc.nextInt();
                         sc.nextLine();
 
